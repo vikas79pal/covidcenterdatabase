@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User page</title>
+</head>
+<link rel="stylesheet" type="text/css" href="msg.css">
+
+<body>
+	<div >
+        <ol id="navbar">
+            <li id="home" class="page">Home</li>
+            <li id="team">Our Team</li>
+            <li id="logout" class="page">Logout</li>
+        </ol>
+    </div>
+	<div class="row1">
+		
+			<h2>Welcome <%=datas.name %></h2>
+			<h4> <%= datas.vaccinated==undefined?"You Have Been Registered but Still Not Vaccinated.":"You Have Been Vaccinated"%></h4>
+				<a  href="./login.ejs" class="bnt">Logout &#8594</a>
+
+			
+		
+	
+		
+</div>
+<script src="msg.js"></script>
+</body>
+</html>

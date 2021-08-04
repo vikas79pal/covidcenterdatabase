@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <style> -->
+    <link rel="stylesheet" href="userlibrary.css">     
+    <!-- </style> -->
+   
+    <meta charset="UTF-8">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booklist</title>
+</head>
+
+<body>
+    <div >
+        <ol id="navbar">
+            <li id="home" class="page">Home</li>
+            <li ><form action="" id="search-f">
+                <input type="text" name="" id="search" placeholder="search by Aadhaar No..." value="">
+            
+            </form></li>
+            <li id="logout" class="page">LogOut</li>
+        </ol>
+    </div>
+    <div class="full">
+
+        <div id="top">
+            <div>
+
+                <header>
+                    <span>Vaccinated & &nbsp</span>  Not Vaccinated List
+                </header>
+            </div>
+        </div>
+
+       
+
+        <div id="display">
+            <table id="tb">
+                <tr>
+
+                    <th class="th">Name</th>
+                    <th class="th">District</th>
+                    <th class="th">Aadhaar No.</th>
+                    <th class="th">Vaccinated</th>
+                    
+                </tr>
+                <% if(datas!=null) { %>
+                    <% datas.forEach(function(item){ %>
+                        <tr>
+                            <td class="td"><%= item.name%></td>
+                            <td class="td"><%= item.district %></td>
+                            <td class="td"><%= item.AdhaarNo%></td>
+                            <td class="td"> <a href="/delete/<%=item._id %>"> <button class="remove"> <%= item.vaccinated===undefined? "NotYet":"Yes" %> </button></a></td>
+
+                            <!-- <td class="td"><a id="downld" href="<%= item.link %>">Download</a></td>     -->
+                            
+                        </tr>
+                    <% }) %>    
+                <% } %>        
+               
+                
+
+
+            </table>
+        </div>
+    </div>
+    <script src="userlibrary.js"></script>
+    
+</body>
+
+</html>
