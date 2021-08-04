@@ -17,6 +17,7 @@ const bcrypt=require("bcrypt");
 // initiating an express object
 
 const app =express();
+const port=process.env.PORT || 8000;
 // useremail=[{user: "vika@jsj",pass:"jdsnj"}]
 
 // importing mongoose
